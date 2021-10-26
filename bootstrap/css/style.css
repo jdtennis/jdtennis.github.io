@@ -92,15 +92,15 @@ body {
 
 #access {
     top:60px;
-    width:100%;
+    width:98%;
     min-height:25px;
     position:absolute;
     z-index:99;
 }
 
 #nav {
-    list-style:none;
-    margin: 8px 10px 0px 0px;
+    list-style: none;
+    margin-top: 8px;
     line-height: 23px;
     font-size: 16px;
 }
@@ -175,7 +175,8 @@ body {
 
 #motto p {
     color:#FFF; 
-    margin:10px 10px 10px 0px;
+    margin:10px auto;
+    width:98%;
     font-family:'Verdana';
     font-size:16px;
     text-align:right;
