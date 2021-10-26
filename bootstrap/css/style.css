@@ -48,14 +48,14 @@ body {
 
 .banner {
     width:100%;
-    min-width:375px;
+    min-width:400px;
     height:100px;
     background-color:rgb(0,0,0);
 }
 
 #site-title {
     width: 70%;
-    min-width: 375px;
+    min-width: 400px;
     position:fixed;
     z-index:97;
     top:0px;
@@ -66,14 +66,14 @@ body {
 
 .wrapper {
     width:70%;
-    min-width: 375px;
+    min-width: 400px;
     margin:0 auto;
     overflow:hidden;
 }
 
 #name {
     top: 20px;
-    width: 225px;
+    width: 220px;
     min-height: 37px;
     line-height:37px;
     position: absolute;
@@ -81,6 +81,7 @@ body {
     font-size:28px;
     color:#fff;
     z-index:98;
+    margin-left: 10px;
 }
 
 #subname {
@@ -99,7 +100,7 @@ body {
 
 #nav {
     list-style:none;
-    margin-top:8px;
+    margin: 8px 10px 0px 0px;
     line-height: 23px;
     font-size: 16px;
 }
@@ -174,7 +175,7 @@ body {
 
 #motto p {
     color:#FFF; 
-    margin:10px auto;
+    margin:10px 10px 10px 0px;
     font-family:'Verdana';
     font-size:16px;
     text-align:right;
