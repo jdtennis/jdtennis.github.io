@@ -577,6 +577,7 @@ body {
 
 
 
+
 .container-description-reverse {
     /* position:relative; */
     margin-top:80px;
@@ -619,17 +620,6 @@ body {
 }
 
 
-
-
-
-/*#qr-code {
-    float:right;
-}*/
-
-
-
-
-
 #research-photo {
     width:300px;
     height:310px;
@@ -661,8 +651,6 @@ body {
     margin-top:15px;
     margin-left:15px;
 }
-
-
 
 #honor-award a img {
     width:180px;
