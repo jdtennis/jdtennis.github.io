@@ -9,7 +9,7 @@
     <!--[if lte IE 8]>
     <link rel='stylesheet' href='./css/style-ie.css' type='text/css'>
     <![endif]-->
-	<link rel="stylesheet" href="./bootstrap/leaflet/leaflet.css"/>
+	<link rel="stylesheet" href="./bootstrap/leaflet/leaflet.css"/>	
 	<!-- make sure you put this AFTER Leaflet's CSS -->
 	<script src="./bootstrap/leaflet/leaflet.js"></script>
 	<script src="./bootstrap/js/jquery-3.3.1.min.js"></script>
@@ -79,9 +79,9 @@
 		</div>
 
 		<div class="container-outside">
-			<div id="quick-link" class="container-block">
+			<div class="container-block">
 				<h1>Quick Links</h1>
-				<div class="container-description">
+				<div id="quick-link" class="container-description">
 					<div class="container-desc-col-4">
 						<a href="http://english.hust.edu.cn" target="_blank">
 							<span><img src="./bootstrap/img/hust-logo.png"></span>
@@ -106,6 +106,96 @@
 			</div> <!-- container-block -->
 		</div> <!-- container-outside -->
 	</script>
+
+	<!-- ABOUT tab -->
+	<script id="about-content" type="text/x-content">
+		<div class="container-outside">
+			<div class="container-block">
+				<h1>About Us</h1>
+				<div class="container-description">
+					<div id="about-me-photo">
+						<span><img src="./bootstrap/img/about-me.jpg"></span>
+					</div>
+					<div id="about-me-text" class="container-text">
+						<div>
+							<p>Jingdong Sun received his B.S. degree (Honors Program) in electronic information and communications from the <a href="http://english.hust.edu.cn" target="_blank">Huazhong University of Science and Technology</a>, Wuhan, China in 2014, and the M.S. and Ph.D degrees in electrical engineering from the <a href="https://www.mst.edu" target="_blank">Missouri University of Science and Technology</a>, Rolla, USA in 2016 and 2020, respectively. He joined Tesla Inc., Palo Alto, CA as a Sr. Electronic Design Engineer since June 2020. His research interests include system modeling for wireless power transfer and signal/power integrity applications. </p>
+							<p>[ Download <a href="./bootstrap/doc/JingdongSun_Resume.pdf" target="_blank">Resume</a> ]</p>
+						</div>
+						<h3>Skills</h3>
+						<div>
+							<p><i>Hardware:</i> SIPI, RF and power delivery system design, schematic, PCB layout</p>
+							<p><i>Software:</i> C/C++, Matlab, Perl, Python, Latex, Javascript, HTML/CSS, TCL/TK</p>
+							<p><i>Measurement:</i> Oscilloscope, VNA, SA, TDR, near-field scanning, micro-probing</p>
+							<p><i>Simulation:</i> full-wave (HFSS, CST, EMC Studio), circuit (ADS, HSPICE, PowerSI)</p>
+						</div>
+					</div>
+				</div> <!-- container-description -->
+			</div> <!-- container-block -->
+
+			<div class="container-block">
+				<h1>Location</h1>
+				<div class="container-description">
+					<div id="my-map"></div>
+					<div id="contact-text" class="container-text">
+						<h3>Address</h3>
+						<div>
+							<p>355 N Wolfe Rd</p>
+							<p>Sunnyvale, CA 94085</p>
+						</div>
+						<h3>Connection</h3>
+						<ul id="contact">
+							<li>
+								<a id="mail" href="#" target="_blank"><span id="mail-address"></span></a>
+							</li>
+							<li>
+								<a id="youtube" href="https://www.youtube.com/channel/UCekcgnf-gAVi8kcx32duN5Q" target="_blank">YouTube</a>
+							</li>
+							<li>
+								<a id="coffee" href="" target="_blank">Buy Me a Coffee</a>
+							</li>
+						</ul>
+						<div id="qr-code">
+							<img src="./bootstrap/img/qrcode.jpg">
+						</div>
+					</div>					
+					<script>
+						/* we use mapbox to provide map information */
+						var mymap = L.map('my-map').setView([37.382111, -122.013826], 15);
+				L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong>',
+                tileSize: 512,
+				maxZoom: 18,
+                zoomOffset: -1,
+                id: 'mapbox/streets-v11',
+				accessToken: 'pk.eyJ1Ijoibm9hbGFjIiwiYSI6ImNqbTc1aWwwaTA3aGIzdXF4ejg1djAwaW8ifQ.v_ppCeRFx1XeG9gYf2azTA'
+					}).addTo(mymap);
+					var marker = L.marker([37.382111, -122.013826]).addTo(mymap);
+					/* important, rerender the map window to make sure all tiles are initialized */
+					var resizeEvent = window.document.createEvent('UIEvents'); 
+					resizeEvent.initUIEvent('resize', true, false, window, 0); 
+					window.dispatchEvent(resizeEvent);
+					marker.bindPopup("<b>Avana Sunnyvale Apartment</b><br>355 N Wolfe Rd, Sunnyvale, CA");
+					</script>
+				</div> <!-- container-description -->
+			</div> <!-- container-block -->
+
+
+		</div> <!-- container-outside -->
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<!-- BLOG tab -->
 	<script id="blog-content" type="text/x-content">
@@ -371,94 +461,6 @@
 		</div> <!-- container-outside -->
 	</script>
 
-	<!-- ABOUT tab -->
-	<script id="about-content" type="text/x-content">
-		<div class="container-outside">
-			<div class="container-block">
-          <h1>About Me</h1>
-				<div class="container-description">
-					<span id="about-me-photo">
-						<img src="./bootstrap/img/about-me.jpg">
-					</span>
-					<div id="about-me-text" class="container-text">
-						<div>
-							<p>Jingdong Sun received his B.S. degree (Honors Program) in electronic information and communications from the <a href="http://english.hust.edu.cn" target="_blank">Huazhong University of Science and Technology</a>, Wuhan, China in 2014, and the M.S. and Ph.D degrees in electrical engineering from the <a href="https://www.mst.edu" target="_blank">Missouri University of Science and Technology</a>, Rolla, USA in 2016 and 2020, respectively. He joined Tesla Inc., Palo Alto, CA as a Sr. Electronic Design Engineer since June 2020. His research interests include system modeling for wireless power transfer and signal/power integrity applications. </p>
-							<p>[ Download <a href="./bootstrap/doc/JingdongSun_Resume.pdf" target="_blank">Resume</a> ]</p>
-						</div>
-						<h3>Skills</h3>
-						<div>
-							<p><i>Hardware:</i> SIPI, RF and power delivery system design, schematic, PCB layout</p>
-							<p><i>Software:</i> C/C++, Matlab, Perl, Python, Latex, Javascript, HTML/CSS, TCL/TK</p>
-							<p><i>Measurement:</i> Oscilloscope, VNA, SA, TDR, near-field scanning, micro-probing</p>
-							<p><i>Simulation:</i> full-wave (HFSS, CST, EMC Studio), circuit (ADS, HSPICE, PowerSI)</p>
-						</div>
-					</div>
-				</div> <!-- container-description -->
-			</div> <!-- container-block -->
-
-
-			<div class="container-block">
-				<h1>Location</h1>
-				<div class="container-description">
-					<span id="contact-photo">
-						<img src="./bootstrap/img/contact.jpg">
-					</span>
-					<div class="container-text">
-						<h3>Address</h3>
-						<div>
-							<p>355 N Wolfe Rd</p>
-							<p>Sunnyvale, CA 94085</p>
-						</div>
-						<h3>Connection</h3>
-						<ul id="contact">
-							<li>
-								<a id="mail" href="#" target="_blank"><span id="mail-address"></span></a>
-							</li>
-							<li>
-								<a id="linkedin" href="https://www.linkedin.com/in/sunjd" target="_blank">LinkedIn@sunjd</a>
-							</li>
-							<li>
-								<a id="twitter" href="https://twitter.com/JingdongSun" target="_blank">Twitter@JingdongSun</a>
-							</li>
-						</ul>
-						<div id="qr-code">
-							<img src="./bootstrap/img/qrcode.jpg">
-						</div>
-					</div>
-				</div> <!-- container-description -->
-			</div> <!-- container-block -->
-
-			<div class="container-block">
-				<h1>Location</h1>
-				<div class="container-description">
-					<div id="my-map" style="display:inline-block;width:70%;height:400px;"></div>
-
-
-					<script>
-						/* we use mapbox to provide map information */
-						var mymap = L.map('my-map').setView([37.382377452297874, -122.01381141840726], 15);
-				L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-                attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
-                tileSize: 512,
-				maxZoom: 18,
-                zoomOffset: -1,
-                id: 'mapbox/streets-v11',
-				accessToken: 'pk.eyJ1Ijoibm9hbGFjIiwiYSI6ImNqbTc1aWwwaTA3aGIzdXF4ejg1djAwaW8ifQ.v_ppCeRFx1XeG9gYf2azTA'
-					}).addTo(mymap);
-					var marker = L.marker([37.382377452297874, -122.01381141840726]).addTo(mymap);
-					/* important, rerender the map window to make sure all tiles are initialized */
-					var resizeEvent = window.document.createEvent('UIEvents'); 
-					resizeEvent.initUIEvent('resize', true, false, window, 0); 
-					window.dispatchEvent(resizeEvent);
-					marker.bindPopup("<b>Avana Sunnyvale Apartment</b><br>355 N Wolfe Rd, Sunnyvale, CA");
-					</script>
-				</div> <!-- container-description -->
-			</div> <!-- container-block -->
-
-
-		</div> <!-- container-outside -->
-	</script>
-
 	<!-- contact tab -->
 	<script id="contact-content" type="text/x-content">
 		<div class="container-outside">
@@ -519,6 +521,8 @@
 			</div> <!-- container-block -->
 		</div> <!-- container-outside -->
 	</script>
+
+
 
 	<!-- animation between tabs on navigation -->
 	<script async src="./bootstrap/js/application.js"></script>
