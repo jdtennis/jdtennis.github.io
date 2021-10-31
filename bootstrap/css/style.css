@@ -463,6 +463,7 @@ body {
     width:38%;
     overflow:hidden;
     margin-right: 2%;
+    margin-bottom: 10px;
 }
 #about-me-text {
     width:58%;
@@ -477,6 +478,7 @@ body {
     width: 66%;
     overflow:hidden;
     margin-right: 2%;
+    margin-bottom: 20px;
 }
 #contact-text {
     width: 30%;
@@ -560,6 +562,7 @@ body {
     width:66%;
     height:425px;
     margin-right: 2%;
+    margin-bottom: 20px;
 }
 
 
