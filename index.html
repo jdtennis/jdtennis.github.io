@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta name="description" content="Welcome to JD Tennis">
+	<meta name="description" content="South bay tennis racquet stringing service.">
 	<title>JD Tennis</title>
 	<link rel='stylesheet' href='./bootstrap/css/style.css' type='text/css'>
     <!--[if lte IE 8]>
@@ -24,17 +24,17 @@
 			</div>
 			<div id="access">
 				<ul id="nav">
+					<li><a id="link-home" href="#home" onclick="changeNavState(id)">HOME</a></li>
+					<li><a id="link-service" href="#service" onclick="changeNavState(id)">SERVICE</a></li>
+					<li><a id="link-blog" href="#blog" onclick="changeNavState(id)">BLOG</a></li>
 					<li><a id="link-about" href="#about" onclick="changeNavState(id)">ABOUT</a></li>
 					<!-- <li><a id="link-resale" href="#resale" onclick="changeNavState(id)">RESALE</a></li> -->
-					<li><a id="link-blog" href="#blog" onclick="changeNavState(id)">BLOG</a></li>
-					<li><a id="link-service" href="#service" onclick="changeNavState(id)">SERVICE</a></li>
-					<li><a id="link-home" href="#home" onclick="changeNavState(id)">HOME</a></li>
 				</ul>
 				<select id="sel" onchange="javascript:if(this.value){location.href=this.value}">
 					<option value="" selected="selected">MENU</option>
 					<option value="#home">HOME</option>
-					<option value="#blog">BLOG</option>
 					<option value="#service">SERVICE</option>
+					<option value="#blog">BLOG</option>
 					<option value="#about">ABOUT</option>
 				</select>
 			</div>
@@ -122,19 +122,21 @@
 							<p>Jingdong Sun received his B.S. degree (Honors Program) in electronic information and communications from the <a href="http://english.hust.edu.cn" target="_blank">Huazhong University of Science and Technology</a>, Wuhan, China in 2014, and the M.S. and Ph.D degrees in electrical engineering from the <a href="https://www.mst.edu" target="_blank">Missouri University of Science and Technology</a>, Rolla, USA in 2016 and 2020, respectively. He joined Tesla Inc., Palo Alto, CA as a Sr. Electronic Design Engineer since June 2020. His research interests include system modeling for wireless power transfer and signal/power integrity applications. </p>
 							<p>[ Download <a href="./bootstrap/doc/JingdongSun_Resume.pdf" target="_blank">Resume</a> ]</p>
 						</div>
-						<h3>Skills</h3>
-						<div>
-							<p><i>Hardware:</i> SIPI, RF and power delivery system design, schematic, PCB layout</p>
-							<p><i>Software:</i> C/C++, Matlab, Perl, Python, Latex, Javascript, HTML/CSS, TCL/TK</p>
-							<p><i>Measurement:</i> Oscilloscope, VNA, SA, TDR, near-field scanning, micro-probing</p>
-							<p><i>Simulation:</i> full-wave (HFSS, CST, EMC Studio), circuit (ADS, HSPICE, PowerSI)</p>
+						<div class="about-me-text-info">
+							<h3>Skills</h3>
+							<div>
+								<p><i>Hardware:</i> SIPI, RF and power delivery system design, schematic, PCB layout.</p>
+								<p><i>Software:</i> C/C++, Matlab, Perl, Python, Latex, Javascript, HTML/CSS, TCL/TK.</p>
+								<p><i>Measurement:</i> Oscilloscope, VNA, SA, TDR, near-field scanning, micro-probing.</p>
+								<p><i>Simulation:</i> full-wave (HFSS, CST, EMC Studio), circuit (ADS, HSPICE, PowerSI).</p>
+							</div>
 						</div>
 					</div>
 				</div> <!-- container-description -->
 			</div> <!-- container-block -->
 
 			<div class="container-block">
-				<h1>Location</h1>
+				<h1>Contact</h1>
 				<div class="container-description">
 					<div id="my-map"></div>
 					<div id="contact-text" class="container-text">
@@ -299,10 +301,10 @@
 			<div class="container-block">
 				<h1>Mathematical Modeling</h1>
 				<div class="container-description">
-					<span id="research-photo">
-						<img src="./bootstrap/img/math-model-solar-house.jpg">
-					</span>
-					<div id="research-text" class="container-text">
+					<div class="research-photo">
+						<span><img src="./bootstrap/img/math-model-solar-house.jpg"></span>
+					</div>
+					<div class="research-text container-text">
 						<div>
 							<h3>Optimal Design for Solar House</h3>
 							<p><b>Objectives:</b><br> A mathematical model aims to solve the problem in balancing the profit and usage of solar energy.</p>
@@ -473,18 +475,13 @@
 	<script src="./bootstrap/js/backtop.js"></script>
 	<!-- change gallery photo and description when click on arrows -->
 	<script>
-		var gallery_photo_titles = new Array(
-			"Welcome to My Homepage",
-			"Best Student Hardware Design Award",
-			"Presentation in CEMC IAB Meeting",
-			"World's First Qi-Certified Wireless Charging Earphones",
-		);
 		var gallery_photo_descriptions = new Array(
 			"Welcome to My Homepage",
 			"Best Student Hardware Design Award",
 			"Presentation in CEMC IAB Meeting",
 			"World's First Qi-Certified Wireless Charging Earphones",
 		);
+		var gallery_photo_titles = gallery_photo_descriptions; /* legacy */
 		/* set up a timer to change gallery photo in time */
 		var timer = window.setInterval("changePhotoRight()", 8000);
 	</script>

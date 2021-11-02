@@ -59,7 +59,7 @@ body {
     max-width: 940px;
     position:fixed;
     z-index:97;
-    top:0px;
+    top:0;
 }
 #main-body {
     padding-top:100px;
@@ -96,6 +96,7 @@ body {
 #access {
     top:60px;
     width:100%;
+    max-width: 940px;
     min-height:25px;
     position:absolute;
     z-index:99;
@@ -106,10 +107,12 @@ body {
     margin: 8px 10px auto;
     line-height: 23px;
     font-size: 16px;
+    position: absolute;
+    right: 0;
 }
 
 #nav li {
-    float:right;
+    display: inline;
     margin:0;
     padding-left:30px;
     vertical-align:middle;
@@ -128,11 +131,11 @@ body {
 }
 
 #nav li a:hover {
+    color:#fff740;
     -webkit-transition:color .5s;
     -moz-transition:color .5s;
     -o-transition:color .5s;
     transition:color .5s;
-    color:#fff740;
 }
 
 
@@ -223,9 +226,6 @@ body {
 }
 
 .gallery-content {
-    /*position:absolute;
-    left:0px;
-    top:0px;*/
     min-width: 375px;
     max-width: 940px;
 }
@@ -257,10 +257,10 @@ body {
 #gallery-text {
     bottom: 0;
     width: 100%;
-    height: 9.6vw;
-    max-height: 108px;
+    height: 5vw;
+    max-height: 70px;
     background-color:#DDD;
-    opacity:0.8;
+    opacity:0.85;
     z-index:2;
     text-align:center;
     align-items: center;
@@ -273,12 +273,12 @@ body {
     overflow:hidden;
     width: 80%;
     /*height: 5.6vw;*/
-    margin: 4% auto auto auto;
+    margin: 2% auto auto auto;
 }
 
 #gallery-description p {
     font-size: 24px;
-    line-height: 140%;
+    line-height: 120%;
     font-weight: bold;
 }
 
@@ -338,9 +338,6 @@ body {
 }
 
 
-
-
-
 .container-outside {
     margin-top:50px;
     margin-bottom:50px;
@@ -356,6 +353,7 @@ body {
     margin-left:40px;
     color:#5C88DA;
     font-size: 28px;
+    line-height: 32px;
 }
 
 .container-description {
@@ -398,15 +396,17 @@ body {
     height: 100%;
 }
 
-/*
+.container-desc-col-2 {
+    display:inline-block;
+    width:46%;
+    margin: 1% 1%;
+}
+
 .container-desc-col-3 {
     display:inline-block;
-    width:32%;
-    min-width: 180px;
-    text-align:center;
+    width:30%;
+    margin: 1% 1%;
 }
-*/
-
 .container-desc-col-4 {
     display:inline-block;
     width:22%;
@@ -440,10 +440,6 @@ body {
 
 .container-text {
     position:relative;
-    /* float:right;
-    display:inline-block;
-    vertical-align:top;
-    margin-left:20px; */
 }
 .container-text h3 {
     margin-top:0px;
@@ -453,9 +449,6 @@ body {
 .container-text p {
     margin-top:0px;
     margin-bottom:0px;
-}
-.container-text div {
-    margin-bottom:20px;
 }
 
 
@@ -468,8 +461,11 @@ body {
 #about-me-text {
     width:58%;
 }
-#about-me-text p {
-    text-align:justify;
+.about-me-text-info {
+    margin-top: 20px;
+}
+.about-me-text-info p {
+    display: inline;
 }
 
 
@@ -564,96 +560,16 @@ body {
     margin-right: 2%;
     margin-bottom: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.container-description-reverse {
-    /* position:relative; */
-    margin-top:80px;
-    margin-right:50px;
-    margin-bottom:0px;
-    bottom:40px;
-    text-align:right;
-}
-.container-description-reverse div {
-    float:left;
-    margin-top:0px;
-    margin-left:40px;
-    text-align:left;
-}
-.container-description-reverse h3, p {
-    margin-top:0px;
-    margin-bottom:0px;
-}
-
-.container-description-reverse a {
-    color:#5C88DA;
-    text-decoration:none;
-    -webkit-transition:color .5s;
-    -moz-transition:color .5s;
-    -o-transition:color .5s;
-    transition:color .5s;
-}
-.container-description-reverse a:hover {
-    color:#0057E7;
-    -webkit-transition:color .5s;
-    -moz-transition:color .5s;
-    -o-transition:color .5s;
-    transition:color .5s;
-}
-
-.container-description-reverse ul {
-    margin-top:0px;
-    margin-bottom:0px;
-    padding-left:15px;
-}
-
-
-#research-photo {
-    width:300px;
-    height:310px;
+.research-photo {
+    width:36%;
     overflow:hidden;
+    margin-right: 2%;
+    margin-bottom: 10px;
 }
-#research-text {
-    width:520px;
-}
-
-
-.opensource-projects {
-    display:inline-block;
-    width:45%;
-    margin-left:20px;
+.research-text {
+    width:60%;
 }
 
-.opensource-projects h3 {
-    /* color:#ddd; */
-    font-size:20px;
-}
-.opensource-screenshots {
-    margin-top:10px;
-    width:330px;
-    height:270px;
-    background-color:#BBB;
-    margin-bottom:10px;
-}
-.opensource-screenshots img {
-    margin-top:15px;
-    margin-left:15px;
-}
 
-#honor-award a img {
-    width:180px;
-    height:120px;
-}
+
 
